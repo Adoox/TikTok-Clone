@@ -19,7 +19,7 @@ const Home = ({ videos }: IProps) => {
       {videos.length ? (
         videos.map((video: Video) => <VideoCard post={video} key={video._id} />)
       ) : (
-        <NoResults text={"Nema nista na backendu"} />
+        <NoResults text={"Nema nistaa na backendu"} />
       )}
     </div>
   );
