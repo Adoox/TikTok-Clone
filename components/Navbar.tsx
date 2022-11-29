@@ -14,11 +14,12 @@ import { createOrGetUser } from "../utils";
 import useAuthStore from "../store/authStore";
 
 const Navbar = () => {
-  const { userProfile, addUser, removeUserFromState } = useAuthStore();
+  const { userProfile, addUser, removeUserFromState }: any = useAuthStore();
+
   return (
-    <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4">
+    <div className="w-full flex justify-between items-center border-b-2 border-gray-300 py-2 px-4 bg-[#e7e7e7]">
       <Link href="/">
-        <div className="w-[100px] md:w-[130px] ">
+        <div className="w-[100px] md:w-[130px]">
           <Image
             alt="adnan"
             className="cursor-pointer"
@@ -46,7 +47,6 @@ const Navbar = () => {
                     className="rounded-full cursor-pointer"
                     src={userProfile.image}
                     alt="profile"
-                    layout="responsive"
                   />
                 </>
               </Link>
